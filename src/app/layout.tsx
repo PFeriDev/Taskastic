@@ -3,8 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
 
 export const metadata: Metadata = {
-  title: "Taskastic.app",
-  description: "This is a taskastic todo app!",
+  title: "Tasktastic.app",
+  description: "This is a tasktastic todo app!",
 };
 
 export default function RootLayout({
