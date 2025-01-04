@@ -9,7 +9,7 @@ function page() {
     <>
       <Header />
       <section className="w-screen grid lg:grid-cols-12 gap-4 mt-5 p-5">
-        <div className="lg:col-span-3 border-2 border-[#383838]/50 rounded-lg p-3">
+        <div className="lg:col-span-3 border border-[#383838]/50 rounded-lg p-3">
           <Label className="flex gap-2 items-center mb-5">
             <FolderOpenDot />
             <p>Active Tasks</p>
@@ -19,10 +19,10 @@ function page() {
             <p>Completed Tasks</p>
           </Label>
         </div>
-        <div className="lg:col-span-6 border-2 border-[#383838]/50 rounded-lg p-3">
+        <div className="lg:col-span-6 border border-[#383838]/50 rounded-lg p-3">
           <CenterSection />
         </div>
-        <div className="lg:col-span-3 border-2 border-[#383838]/50 rounded-lg p-3">
+        <div className="lg:col-span-3 border border-[#383838]/50 rounded-lg p-3">
           <AddTodoForm />
         </div>
       </section>

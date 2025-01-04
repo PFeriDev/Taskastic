@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 interface Todo {
   id: number;
@@ -98,9 +99,9 @@ const TodosList = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold">Todos</h1>
-      <ul className="list-disc pl-5 space-y-4">
+      <ul className="">
         {todos.map((todo) => (
-          <li key={todo.id} className="space-y-1">
+          <li key={todo.id} className="border border-[#383838]/50 p-5 mt-3  rounded">
             <div className="flex items-center justify-between">
               <div>
                 <span className="text-lg font-semibold">{todo.title}</span>
@@ -108,16 +109,12 @@ const TodosList = () => {
                 <p>{todo.completed ? "✅ Completed" : "❌ Not completed"}</p>
               </div>
               <div className="flex space-x-2">
-                <button
-                  onClick={() => handleToggleCompleted(todo.id, todo.completed)}
-                  className="text-sm bg-blue-500 text-white px-2 py-1 rounded">
+                <Button variant="outline" onClick={() => handleToggleCompleted(todo.id, todo.completed)}>
                   {todo.completed ? "Mark as Incomplete" : "Mark as Completed"}
-                </button>
-                <button
-                  onClick={() => handleDeleteTodo(todo.id)}
-                  className="text-sm bg-red-500 text-white px-2 py-1 rounded">
+                </Button>
+                <Button variant="destructive" onClick={() => handleDeleteTodo(todo.id)}>
                   Delete
-                </button>
+                </Button>
               </div>
             </div>
           </li>
