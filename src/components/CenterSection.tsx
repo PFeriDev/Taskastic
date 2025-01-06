@@ -1,12 +1,10 @@
 import React from "react";
-import TodosList from "./TodosList";
-import CompletedTodos from "./CompletedTodos";
+import TodosList, { TodoContainer, TodoList } from "./TodosList";
 
 const CenterSection = () => {
   return (
     <>
-      <TodosList />
-      <CompletedTodos />
+      <TodoContainer />
     </>
   );
 };

@@ -1,8 +1,9 @@
-import AddTodoForm from "@/components/AddTodoForm";
+"use client";
 import CenterSection from "@/components/CenterSection";
 import Header from "@/components/Header";
 import { Label } from "@/components/ui/label";
 import { FolderDot, FolderOpenDot } from "lucide-react";
+import TodoContainer, { AddTodoForm } from "@/components/TodosList";
 
 function page() {
   return (
@@ -19,12 +20,7 @@ function page() {
             <p>Completed Tasks</p>
           </Label>
         </div>
-        <div className="lg:col-span-6 border border-[#383838]/50 rounded-lg p-3">
-          <CenterSection />
-        </div>
-        <div className="lg:col-span-3 border border-[#383838]/50 rounded-lg p-3">
-          <AddTodoForm />
-        </div>
+        <TodoContainer />
       </section>
     </>
   );
